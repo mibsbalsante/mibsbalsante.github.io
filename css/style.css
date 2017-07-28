@@ -30,7 +30,11 @@ body {
   line-height: 2em;
   margin: 0;
   position: relative;
-  height: 100vh;
+}
+
+body,
+main {
+	height: 100vh;
   width: 100vw;
 }
 
@@ -74,7 +78,7 @@ a:hover:nth-child(7), a:focus:nth-child(7) {
   color: #2CA5E0;
 }
 
-#card {
+main > .card {
   position: absolute;
   top: 50%;
   z-index: 999;
@@ -84,24 +88,24 @@ a:hover:nth-child(7), a:focus:nth-child(7) {
   padding: 4em 0;
   width: 100%;
 }
-#card .icon {
+main > .card .icon {
   border-radius: 100%;
   display: block;
   height: 12em;
   width: 12em;
   margin: 0 auto;
-  background: #191919 url("http://melissabalsante.com/assets/img/w-icon.png") top center/150% no-repeat;
+  background: #191919 url("../img/icon.png") top center/100% no-repeat;
 }
-#card nav {
+main > .card nav {
   display: flex;
   justify-content: center;
   padding: 3em 0 0;
 }
-#card nav a {
+main > .card nav a {
   width: 2em;
 }
 
-#bg {
+main > .bg {
   background: #11B382;
   width: inherit;
   height: inherit;
@@ -109,30 +113,30 @@ a:hover:nth-child(7), a:focus:nth-child(7) {
   position: relative;
   overflow: hidden;
 }
-#bg:before, #bg:after,
-#bg > div {
+main > .bg:before, main > .bg:after,
+main > .bg > div {
   width: 500%;
   position: absolute;
   left: -150%;
   animation-duration: 10s;
   animation-iteration-count: infinite;
 }
-#bg:before, #bg:after {
+main > .bg:before, main > .bg:after {
   content: '';
 }
-#bg:before {
+main > .bg:before {
   background: #1592D4;
   height: 300%;
   top: 120%;
   animation-name: block1;
 }
-#bg > div {
+main > .bg > div {
   background: #1E5166;
   height: 250%;
   top: 100%;
   animation-name: block2;
 }
-#bg:after {
+main > .bg:after {
   background: #CF2D2B;
   height: 200%;
   top: 80%;
