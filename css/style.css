@@ -26,19 +26,19 @@
 
 @keyframes movedown {
 	0% {
-		top: 0;
+		top: 1em;
 	}
 	50% {
-		top: 1.2em;
+		top: 2em;
 	}
 	60% {
-		top: .8em;
+		top: 1.5em;
 	}
 	70% {
-		top: 1.2em;
+		top: 2em;
 	}
 	100% {
-		top: 0;
+		top: 1em;
 	}
 }
 
@@ -197,11 +197,14 @@ main > .bg:after {
 	height: 2em;
 	position: relative;
 }
+.link-button i {
+	position: absolute;
+}
 .link-button:hover,
 .link-button:focus {
 	color: #11B382;
 }
-.link-button:hover,
+.link-button:hover > i,
 .link-button:focus > i {
 	animation-name: movedown;
 	animation-duration: 2s;
