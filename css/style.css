@@ -192,13 +192,15 @@ main > .bg:after {
 }
 
 .link-button {
-	display: block;
+	display: flex;
+	justify-content: center;
 	padding-top: 1em;
 	height: 2em;
 	position: relative;
 }
 .link-button i {
 	position: absolute;
+	width: 100%;
 }
 .link-button:hover,
 .link-button:focus {
