@@ -33,15 +33,14 @@
 body {
   color: #fefefe;
   font-family: 'Kalam', cursive;
-  font-size: 16px;
   line-height: 2em;
   margin: 0;
   position: relative;
+	min-height: 100vh;
 }
 
 body,
 main {
-	height: 100vh;
   width: 100%;
 }
 
@@ -66,12 +65,20 @@ a {
   transition: all .4s ease-out;
 }
 
+main {
+	position: relative;
+}
+
 main > .bg {
   background: #11B382;
   width: inherit;
   height: inherit;
   display: block;
-  position: relative;
+  position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
   overflow: hidden;
 }
 main > .bg:before, main > .bg:after,
@@ -105,15 +112,9 @@ main > .bg:after {
 }
 
 .info-card {
-  position: absolute;
-  top: 50%;
-  z-index: 999;
-  transform: translateY(-50%);
+	z-index: 1;
   background: #323232;
   text-align: center;
-  padding: 4em 0;
-  width: calc(100% - 4em);
-	margin: 0 2em;
 }
 .info-card > .icon {
   border-radius: 100%;
@@ -132,11 +133,6 @@ main > .bg:after {
   display: flex;
   justify-content: center;
   padding: 2em 0 0;
-}
-.social-media > a {
-  width: 2em;
-	font-size: 2em;
-	display: block;
 }
 .social-media a:hover:nth-child(1),
 .social-media a:focus:nth-child(1) {
@@ -179,7 +175,6 @@ main > .bg:after {
 section {
 	min-height: 100vh;
 	width: 100%;
-	padding: 3em 2em;
 	background: #323232;
 	border-width: .4em 0;
 	border-style: solid;
@@ -208,7 +203,6 @@ section {
 	background: #608888;
 	border: .4em solid #608888;
 	border-radius: 100%;
-	margin: 3em 0;
 	position: relative;
 	overflow: hidden;
 }
@@ -219,7 +213,6 @@ section {
 
 .skills-card {
 	flex-shrink: 2;
-	min-width: 25em;
 	background: #fefefe;
 	color: #323232;
 }
@@ -237,13 +230,79 @@ footer a {
 }
 
 @media (min-width: 800px) {
+	body {
+		font-size: 16px;
+	}
+
+	main {
+		height: 100vh;
+	}
+
+	.info-card {
+	  padding: 4em 2em;
+	  width: calc(100% - 4em);
+		margin: 0 2em;
+
+	  position: absolute;
+	  top: 50%;
+		left: 0;
+	  transform: translateY(-50%);
+	}
+
+	.social-media > a {
+		font-size: 2em;
+	  width: 2em;
+	}
+
+	.link-button {
+		font-size: 1.5em;
+	}
+
 	section {
 		flex-wrap: nowrap;
+		padding: 3em 2em;
+	}
+
+	.personal-card > .picture {
+		margin: 4em 0 2em;
 	}
 }
 
 @media (max-width: 799px) {
+	body {
+		font-size: 14px;
+	}
+
+	main {
+		padding: 3em 0;
+	}
+
+	.info-card {
+		padding: 3em 1em;
+		width: calc(100% - 2em);
+		margin: 0 1em;
+
+		position: relative;
+	}
+
+	.social-media {
+		flex-wrap: wrap;
+	}
+	.social-media > a {
+		font-size: 3em;
+	  width: 40%;
+		padding: .5em 0;
+	}
+
+	.link-button {
+		font-size: 2em;
+	}
+
 	section {
 		flex-wrap: wrap;
+	}
+
+	.personal-card > .picture {
+		margin: 4em auto 2em;
 	}
 }
