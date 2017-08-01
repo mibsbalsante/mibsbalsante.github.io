@@ -24,6 +24,24 @@
   }
 }
 
+@keyframes movedown {
+	0% {
+		top: 0;
+	}
+	50% {
+		top: 1.2em;
+	}
+	60% {
+		top: .8em;
+	}
+	70% {
+		top: 1.2em;
+	}
+	100% {
+		top: 0;
+	}
+}
+
 *,
 *:before,
 *:after {
@@ -175,11 +193,19 @@ main > .bg:after {
 
 .link-button {
 	display: block;
-	margin-top: 1em;
+	padding-top: 1em;
+	height: 2em;
+	position: relative;
 }
 .link-button:hover,
 .link-button:focus {
 	color: #11B382;
+}
+.link-button:hover,
+.link-button:focus > i {
+	animation-name: movedown;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
 }
 
 section {
