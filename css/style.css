@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Kalam");
+@import url('https://fonts.googleapis.com/css?family=Courgette|Open+Sans:300');
 @keyframes block1 {
   0% {
     transform: rotateZ(150deg);
@@ -32,7 +32,7 @@
 
 body {
   color: #fefefe;
-  font-family: 'Kalam', cursive;
+  font-family: 'Open Sans', sans-serif;
   line-height: 2em;
   margin: 0;
   position: relative;
@@ -44,6 +44,12 @@ main {
   width: 100%;
 }
 
+h1,
+h2,
+h3 {
+	font-family: 'Courgette', cursive;
+}
+
 h1 {
   margin: 1em 0 0;
   font-size: 3.2em;
@@ -53,8 +59,12 @@ h2 {
 	font-size: 2.5em;
 }
 
+h3 {
+	font-size: 1.5em;
+}
+
 p {
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin: 0;
 }
 
@@ -194,7 +204,7 @@ section {
 .personal-card > h2 > .sub {
 	display: block;
 	color: #11B382;
-	font-size: .4em;
+	font-size: .5em;
 	font-weight: 300;
 }
 .personal-card > .picture {
