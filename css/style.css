@@ -201,6 +201,7 @@ main > .bg:after {
 .link-button i {
 	position: absolute;
 	width: 100%;
+	left: 0;
 }
 .link-button:hover,
 .link-button:focus {
