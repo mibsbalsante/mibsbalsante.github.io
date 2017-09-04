@@ -195,10 +195,7 @@ main > .bg:after {
 	position: relative;
 }
 .link-button i {
-	position: absolute;
 	width: 100%;
-	left: 0;
-	top: 0;
 	transform: translateY(0);
 }
 .link-button:hover,
