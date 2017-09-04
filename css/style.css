@@ -26,10 +26,10 @@
 
 @keyframes movedown {
 	0% {
-		transform: translateY(0em);
+		transform: translateY(0);
 	}
 	50% {
-		transform: translateY(1em);
+		transform: translateY(1.2em);
 	}
 	60% {
 		transform: translateY(0.5em);
@@ -38,7 +38,7 @@
 		transform: translateY(1em);
 	}
 	100% {
-		transform: translateY(0em);
+		transform: translateY(0);
 	}
 }
 
@@ -198,6 +198,8 @@ main > .bg:after {
 	position: absolute;
 	width: 100%;
 	left: 0;
+	top: 0;
+	transform: translateY(0);
 }
 .link-button:hover,
 .link-button:focus {
@@ -205,7 +207,6 @@ main > .bg:after {
 }
 .link-button:hover > i,
 .link-button:focus > i {
-	top: 0;
 	animation: movedown 2s infinite;
 }
 
