@@ -26,19 +26,19 @@
 
 @keyframes movedown {
 	0% {
-		top: 1em;
+		transform: translateY(0em);
 	}
 	50% {
-		top: 2em;
+		transform: translateY(1em);
 	}
 	60% {
-		top: 1.5em;
+		transform: translateY(0.5em);
 	}
 	70% {
-		top: 2em;
+		transform: translateY(1em);
 	}
 	100% {
-		top: 1em;
+		transform: translateY(0em);
 	}
 }
 
@@ -67,16 +67,13 @@ h2,
 h3 {
 	font-family: 'Courgette', cursive;
 }
-
 h1 {
   margin: 1em 0 0;
   font-size: 3.2em;
 }
-
 h2 {
 	font-size: 2.5em;
 }
-
 h3 {
 	font-size: 1.5em;
 }
@@ -96,7 +93,6 @@ a {
 main {
 	position: relative;
 }
-
 main > .bg {
   background: #11B382;
   width: inherit;
@@ -158,7 +154,7 @@ main > .bg:after {
 }
 
 .social-media {
-  display: flex;
+  display: grid;
   justify-content: center;
   padding: 2em 0 0;
 }
@@ -192,8 +188,8 @@ main > .bg:after {
 }
 
 .link-button {
-	display: flex;
-	justify-content: center;
+	display: block;
+	text-align: center;
 	padding-top: 1em;
 	height: 2em;
 	position: relative;
@@ -209,9 +205,8 @@ main > .bg:after {
 }
 .link-button:hover > i,
 .link-button:focus > i {
-	animation-name: movedown;
-	animation-duration: 2s;
-	animation-iteration-count: infinite;
+	top: 0;
+	animation: movedown 2s infinite;
 }
 
 section {
@@ -221,18 +216,15 @@ section {
 	border-width: .4em 0;
 	border-style: solid;
 	border-color: #608888;
-	display: flex;
+	display: grid;
+	grid-template-columns: minmax(20em, 40%) minmax(25em, 60%);
 }
 
 .skills-card,
 .personal-card {
-	width: 100%;
 	padding: 2em;
 }
 
-.personal-card {
-	flex-shrink: 3;
-}
 .personal-card > h2 > .sub {
 	display: block;
 	color: #11B382;
@@ -254,7 +246,6 @@ section {
 }
 
 .skills-card {
-	flex-shrink: 2;
 	background: #fefefe;
 	color: #323232;
 }
@@ -291,6 +282,9 @@ footer a {
 	  transform: translateY(-50%);
 	}
 
+	.social-media {
+		grid-template-columns: repeat(7, 4em);
+	}
 	.social-media > a {
 		font-size: 2em;
 	  width: 2em;
@@ -301,7 +295,6 @@ footer a {
 	}
 
 	section {
-		flex-wrap: nowrap;
 		padding: 3em 2em;
 	}
 
@@ -323,25 +316,19 @@ footer a {
 		padding: 3em 1em;
 		width: calc(100% - 2em);
 		margin: 0 1em;
-
 		position: relative;
 	}
 
 	.social-media {
-		flex-wrap: wrap;
+		grid-template-columns: repeat(2, 40%);
 	}
 	.social-media > a {
 		font-size: 3em;
-	  width: 40%;
 		padding: .5em 0;
 	}
 
 	.link-button {
 		font-size: 2em;
-	}
-
-	section {
-		flex-wrap: wrap;
 	}
 
 	.personal-card > .picture {
