@@ -32,7 +32,7 @@
 		transform: translateY(1.2em);
 	}
 	60% {
-		transform: translateY(0.5em);
+		transform: translateY(.5em);
 	}
 	70% {
 		transform: translateY(1em);
@@ -90,6 +90,36 @@ a {
   transition: all .4s ease-out;
 }
 
+.circle-bordered {
+	border-radius: 100%;
+	position: relative;
+  background: #608888 url("../img/icon.png") top center/100% no-repeat;
+}
+.circle-bordered:after {
+	content: '';
+	position: absolute;
+	width: calc(100% + .6rem);
+	height: calc(100% + .58rem);
+	top: -.3rem;
+	left: -.3rem;
+	/*width: calc(100% + 11px);
+	height: calc(100% + 11px);
+	top: -5px;
+	left: -5px;*/
+	border-radius: 100%;
+	border: .4rem dashed #608888;
+}
+.circle-bordered:before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	border-radius: 100%;
+	border: .2rem solid #608888;
+}
+
 main {
 	position: relative;
 }
@@ -141,13 +171,10 @@ main > .bg:after {
   text-align: center;
 }
 .info-card > .icon {
-  border-radius: 100%;
   display: block;
   height: 12em;
   width: 12em;
   margin: 0 auto;
-	border: .4em solid #608888;
-  background: #608888 url("../img/icon.png") top center/100% no-repeat;
 }
 .info-card .colored {
 	color: #608888;
@@ -158,32 +185,35 @@ main > .bg:after {
   justify-content: center;
   padding: 2em 0 0;
 }
-.social-media a:hover:nth-child(1),
-.social-media a:focus:nth-child(1) {
+..social-media > a {
+	width: 100%;
+}
+.social-media > a:hover:nth-child(1),
+.social-media > a:focus:nth-child(1) {
   color: #000;
 }
-.social-media a:hover:nth-child(2),
-.social-media a:focus:nth-child(2) {
+.social-media > a:hover:nth-child(2),
+.social-media > a:focus:nth-child(2) {
   color: #24292E;
 }
-.social-media a:hover:nth-child(3),
-.social-media a:focus:nth-child(3) {
+.social-media > a:hover:nth-child(3),
+.social-media > a:focus:nth-child(3) {
   color: #205081;
 }
-.social-media a:hover:nth-child(4),
-.social-media a:focus:nth-child(4) {
+.social-media > a:hover:nth-child(4),
+.social-media > a:focus:nth-child(4) {
   color: #4875B4;
 }
-.social-media a:hover:nth-child(5),
-.social-media a:focus:nth-child(5) {
+.social-media > a:hover:nth-child(5),
+.social-media > a:focus:nth-child(5) {
   color: #1FD662;
 }
-.social-media a:hover:nth-child(6),
-.social-media a:focus:nth-child(6) {
+.social-media > a:hover:nth-child(6),
+.social-media > a:focus:nth-child(6) {
   color: #BA0000;
 }
-.social-media a:hover:nth-child(7),
-.social-media a:focus:nth-child(7) {
+.social-media > a:hover:nth-child(7),
+.social-media > a:focus:nth-child(7) {
   color: #2CA5E0;
 }
 
@@ -211,11 +241,10 @@ section {
 	min-height: 100vh;
 	width: 100%;
 	background: #323232;
-	border-width: .4em 0;
-	border-style: solid;
+	border-width: .4rem 0;
+	border-style: double;
 	border-color: #608888;
 	display: grid;
-	grid-template-columns: minmax(20em, 40%) minmax(25em, 60%);
 }
 
 .skills-card,
@@ -233,14 +262,13 @@ section {
 	width: 16em;
 	height: 16em;
 	background: #608888;
-	border: .4em solid #608888;
-	border-radius: 100%;
-	position: relative;
-	overflow: hidden;
 }
 .personal-card > .picture > img {
 	width: 100%;
-	margin-top: -1em;
+	height: 100%;
+	border-radius: 100%;
+	object-fit: cover;
+	object-position: center -1em;
 }
 
 .skills-card {
@@ -269,6 +297,11 @@ footer a {
 		height: 100vh;
 	}
 
+	.info-card,
+	.skills-card {
+		box-shadow: .2em .2em .5em -.1em rgba(0, 0, 0, .6)
+	}
+
 	.info-card {
 	  padding: 4em 2em;
 	  width: calc(100% - 4em);
@@ -294,6 +327,7 @@ footer a {
 
 	section {
 		padding: 3em 2em;
+		grid-template-columns: minmax(20em, 40%) minmax(25em, 60%);
 	}
 
 	.personal-card > .picture {
@@ -328,6 +362,10 @@ footer a {
 	.link-button {
 		font-size: 2em;
 	}
+
+	section {
+  	grid-template-columns: 100%;
+  }
 
 	.personal-card > .picture {
 		margin: 4em auto 2em;
