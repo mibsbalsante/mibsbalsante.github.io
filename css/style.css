@@ -177,7 +177,7 @@ main > .bg:after {
 	display: block;
 	text-align: center;
 	padding-top: 1em;
-	height: 2em;
+	height: 4em;
 	position: relative;
 }
 .link-button i {
@@ -259,7 +259,7 @@ footer a {
 	}
 
 	.info-card {
-	  padding: 4em 2em;
+	  padding: 4em 2em 2em;
 	  width: calc(100% - 4em);
 		margin: 0 2em;
 
