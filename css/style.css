@@ -1,47 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Courgette|Open+Sans:300');
-@keyframes block1 {
-  0% {
-    transform: rotateZ(150deg);
-  }
-  100% {
-    transform: rotateZ(510deg);
-  }
-}
-@keyframes block2 {
-  0% {
-    transform: rotateZ(130deg);
-  }
-  100% {
-    transform: rotateZ(490deg);
-  }
-}
-@keyframes block3 {
-  0% {
-    transform: rotateZ(110deg);
-  }
-  100% {
-    transform: rotateZ(470deg);
-  }
-}
-
-@keyframes movedown {
-	0% {
-		transform: translateY(0);
-	}
-	50% {
-		transform: translateY(1.2em);
-	}
-	60% {
-		transform: translateY(.5em);
-	}
-	70% {
-		transform: translateY(1em);
-	}
-	100% {
-		transform: translateY(0);
-	}
-}
-
 *,
 *:before,
 *:after {
@@ -369,5 +325,48 @@ footer a {
 
 	.personal-card > .picture {
 		margin: 4em auto 2em;
+	}
+}
+
+@keyframes block1 {
+  0% {
+    transform: rotateZ(150deg);
+  }
+  100% {
+    transform: rotateZ(510deg);
+  }
+}
+@keyframes block2 {
+  0% {
+    transform: rotateZ(130deg);
+  }
+  100% {
+    transform: rotateZ(490deg);
+  }
+}
+@keyframes block3 {
+  0% {
+    transform: rotateZ(110deg);
+  }
+  100% {
+    transform: rotateZ(470deg);
+  }
+}
+
+@keyframes movedown {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(1.2em);
+	}
+	60% {
+		transform: translateY(.5em);
+	}
+	70% {
+		transform: translateY(1em);
+	}
+	100% {
+		transform: translateY(0);
 	}
 }
