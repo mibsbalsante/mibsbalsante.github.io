@@ -141,7 +141,7 @@ main > .bg:after {
   justify-content: center;
   padding: 2em 0 0;
 }
-..social-media > a {
+.social-media > a {
 	width: 100%;
 }
 .social-media > a:hover:nth-child(1),
@@ -204,8 +204,9 @@ section {
 }
 
 .skills-card,
-.personal-card {
-	padding: 2em;
+.personal-card,
+.projects-card {
+	padding: 2rem;
 }
 
 .personal-card > h2 > .sub {
@@ -233,6 +234,10 @@ section {
 }
 .skills-card h3 {
 	color:  #11B382;
+}
+
+.projects-card {
+	border-top: .1em solid #11B382;
 }
 
 footer {
@@ -283,7 +288,21 @@ footer a {
 
 	section {
 		padding: 3em 2em;
-		grid-template-columns: minmax(20em, 40%) minmax(25em, 60%);
+		grid-template-columns: minmax(20em, 45%) minmax(25em, 55%);
+	}
+
+	.personal-card {
+		grid-row: 1/2;
+	}
+
+	.skills-card {
+		grid-row: 1/4;
+	}
+
+	.projects-card {
+		grid-row: 2/4;
+		border-right: 0;
+		margin-right: 2rem;
 	}
 
 	.personal-card > .picture {
