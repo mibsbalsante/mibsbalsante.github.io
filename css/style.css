@@ -1,3 +1,20 @@
+:root {
+	--white: #fefefe;
+	--lightblue: #608888;
+	--darkblue: #1E5166;
+	--green: #11B382;
+	--red: #CF2C2C;
+	--dark: #323232;
+	--darkshadow: rgba(0, 0, 0, .6);
+	--brandcp: #000;
+	--brandgh: #24292E;
+	--brandbb: #205081;
+	--brandin: #4875B4;
+	--brandsp: #1FD662;
+	--brandfm: #BA0000;
+	--brandtg: #2CA5E0;
+}
+
 *,
 *:before,
 *:after {
@@ -5,7 +22,7 @@
 }
 
 body {
-  color: #fefefe;
+  color: var(--white);
   font-family: 'Open Sans', sans-serif;
   line-height: 2em;
   margin: 0;
@@ -40,7 +57,7 @@ p {
 }
 
 a {
-  color: #fefefe;
+  color: var(--white);
   text-decoration: none;
   outline: 0;
   transition: all .4s ease-out;
@@ -49,7 +66,7 @@ a {
 .circle-bordered {
 	border-radius: 100%;
 	position: relative;
-  background: #608888 url("../img/icon.png") top center/100% no-repeat;
+  background: var(--lightblue) url("../img/icon.png") top center/100% no-repeat;
 }
 .circle-bordered:after {
 	content: '';
@@ -63,7 +80,7 @@ a {
 	top: -5px;
 	left: -5px;*/
 	border-radius: 100%;
-	border: .4rem dashed #608888;
+	border: .4rem dashed var(--lightblue);
 }
 .circle-bordered:before {
 	content: '';
@@ -73,14 +90,14 @@ a {
 	top: 0;
 	left: 0;
 	border-radius: 100%;
-	border: .2rem solid #608888;
+	border: .2rem solid var(--lightblue);
 }
 
 main {
 	position: relative;
 }
 main > .bg {
-  background: #11B382;
+  background: var(--green);
   width: inherit;
   height: inherit;
   display: block;
@@ -103,19 +120,19 @@ main > .bg:before, main > .bg:after {
   content: '';
 }
 main > .bg:before {
-  background: #608888;
+  background: var(--lightblue);
   height: 300%;
   top: 120%;
   animation-name: block1;
 }
 main > .bg > div {
-  background: #1E5166;
+  background: var(--darkblue);
   height: 250%;
   top: 100%;
   animation-name: block2;
 }
 main > .bg:after {
-  background: #CF2C2C;
+  background: var(--red);
   height: 200%;
   top: 80%;
   animation-name: block3;
@@ -123,7 +140,7 @@ main > .bg:after {
 
 .info-card {
 	z-index: 1;
-  background: #323232;
+  background: var(--dark);
   text-align: center;
 }
 .info-card > .icon {
@@ -133,7 +150,7 @@ main > .bg:after {
   margin: 0 auto;
 }
 .info-card .colored {
-	color: #608888;
+	color: var(--lightblue);
 }
 
 .social-media {
@@ -146,31 +163,31 @@ main > .bg:after {
 }
 .social-media > a:hover:nth-child(1),
 .social-media > a:focus:nth-child(1) {
-  color: #000;
+  color: var(--brandcp);
 }
 .social-media > a:hover:nth-child(2),
 .social-media > a:focus:nth-child(2) {
-  color: #24292E;
+  color: var(--brandgh);
 }
 .social-media > a:hover:nth-child(3),
 .social-media > a:focus:nth-child(3) {
-  color: #205081;
+  color: var(--brandbb);
 }
 .social-media > a:hover:nth-child(4),
 .social-media > a:focus:nth-child(4) {
-  color: #4875B4;
+  color: var(--brandin);
 }
 .social-media > a:hover:nth-child(5),
 .social-media > a:focus:nth-child(5) {
-  color: #1FD662;
+  color: var(--brandsp);
 }
 .social-media > a:hover:nth-child(6),
 .social-media > a:focus:nth-child(6) {
-  color: #BA0000;
+  color: var(--brandfm);
 }
 .social-media > a:hover:nth-child(7),
 .social-media > a:focus:nth-child(7) {
-  color: #2CA5E0;
+  color: var(--brandtg);
 }
 
 .link-button {
@@ -186,7 +203,7 @@ main > .bg:after {
 }
 .link-button:hover,
 .link-button:focus {
-	color: #11B382;
+	color: var(--green);
 }
 .link-button:hover > i,
 .link-button:focus > i {
@@ -196,10 +213,10 @@ main > .bg:after {
 section {
 	min-height: 100vh;
 	width: 100%;
-	background: #323232;
+	background: var(--dark);
 	border-width: .4rem 0;
 	border-style: double;
-	border-color: #608888;
+	border-color: var(--lightblue);
 	display: grid;
 }
 
@@ -211,14 +228,14 @@ section {
 
 .personal-card > h2 > .sub {
 	display: block;
-	color: #11B382;
+	color: var(--green);
 	font-size: .5em;
 	font-weight: 300;
 }
 .personal-card > .picture {
 	width: 16em;
 	height: 16em;
-	background: #608888;
+	background: var(--lightblue);
 }
 .personal-card > .picture > img {
 	width: 100%;
@@ -229,19 +246,19 @@ section {
 }
 
 .skills-card {
-	background: #fefefe;
-	color: #323232;
+	background: var(--white);
+	color: var(--dark);
 }
 .skills-card h3 {
-	color:  #11B382;
+	color:  var(--green);
 }
 
 .projects-card {
-	border-top: .1em solid #11B382;
+	border-top: .1em solid var(--green);
 }
 
 footer {
-	background: #11B382;
+	background: var(--green);
 	padding: 1em 2em;
 	text-align: center;
 }
@@ -260,7 +277,7 @@ footer a {
 
 	.info-card,
 	.skills-card {
-		box-shadow: .2em .2em .5em -.1em rgba(0, 0, 0, .6)
+		box-shadow: .2em .2em .5em -.1em var(--darkshadow);
 	}
 
 	.info-card {
